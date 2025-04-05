@@ -1,0 +1,38 @@
+{
+  "name": "personal-project-v2",
+  "version": "1.0.0",
+  "description": "Medisure - personal project v2",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Godly-MysteriOus/personal-project-v2.git"
+  },
+  "author": "Jayant Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Godly-MysteriOus/personal-project-v2/issues"
+  },
+  "homepage": "https://github.com/Godly-MysteriOus/personal-project-v2#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "connect-mongodb-session": "^5.0.0",
+    "cors": "^2.8.5",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.13.1",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
