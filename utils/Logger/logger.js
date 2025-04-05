@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Ensure log directory exists
-const logDir = "logs";
+const logDir = path.join(__dirname,'..','..','logs');
 if (!fs.existsSync(logDir)) {
     fs.mkdirSync(logDir);
 }
@@ -34,4 +34,5 @@ const logger = createLogger({
         }),
     ],
 });
+
 module.exports = logger;

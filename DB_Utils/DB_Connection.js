@@ -1,8 +1,12 @@
 const mongoose = require('mongoose');
 const config = require('../config');
 const logger = require('../utils/Logger/logger');
+
+exports.dbURI = {
+    connectionURI : config.dbConnectionURI,
+}
 exports.devDBConnection = (app,PORT) =>{
-    mongoose.connect(config.DevDBConnection)
+    mongoose.connect(exports.dbURI.connectionURI)
     .then(()=>app.listen(PORT))
     .then(()=>{
         logger.info('Connection Successfull');
@@ -11,12 +15,3 @@ exports.devDBConnection = (app,PORT) =>{
         console.log(err.stack);
     });
 };
-
-exports.prodDBConnection = (app,PORT) =>{
-    mongoose.connect(config.ProdDBConnection)
-    .then(()=>app.listen(PORT))
-    .then(()=>console.log('Connection  Successfull'))
-    .catch(err=>{
-        console.log(err.stack);
-    });
-}
