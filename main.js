@@ -1,21 +1,24 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const connection = require('./DB_Utils/DB_Connection');
+const cors = require('cors');
+const path = require('path');
+const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
 const csrf = require('csurf');
 const csrfProtection = csrf();
-const cors = require('cors');
-const session = require('express-session');
-const csurf = require('csurf');
-const MongoDBStore = require('connect-mongodb-session')(session);
+
+const connection = require('./DB_Utils/DB_Connection');
+const limiter = require('./utils/RateLimiter/rateLimiter');
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(csrfProtection);
+app.use(limiter);
+app.use(express.static(path.join(__dirname,'public')));
 const store = new MongoDBStore({
-    uri: dbURI.DB_Connections.DEV_URI,
+    uri: connection.dbURI.connectionURI,
     collection: 'sessions'
 });
 app.use(    
@@ -27,6 +30,7 @@ app.use(
         cookie:{maxAge:3*60*60*1000},
     }),
 );
+app.use(csrfProtection);
 app.use(cors({
     origin: '*', // Replace with your front-end URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
@@ -34,15 +38,18 @@ app.use(cors({
 }));
 app.use((req,res,next)=>{
     res.locals.csrfToken = req.csrfToken();
+    next();
 });
 
-const signupAuthRoute = require('./routes/signupRoute');
-const loginLogoutRoute = require('./routes/login_logout');
-const sellerRoute = require('./routes/sellerRoute');
-const customerRoute = require('./routes/customerRoute');
+// const signupAuthRoute = require('./routes/signupRoute');
+// const loginLogoutRoute = require('./routes/login_logout');
+// const sellerRoute = require('./routes/sellerRoute');
+// const customerRoute = require('./routes/customerRoute');
 
-app.use('/signup',signupAuthRoute);
-app.use('/customer',customerRoute);
-app.use('/seller',sellerRoute);
-
+// app.use('/signup',signupAuthRoute);
+// app.use('/customer',customerRoute);
+// app.use('/seller',sellerRoute);
+app.use((req,res,next)=>{
+    res.render('homePage');
+});
 connection.devDBConnection(app,2100);
