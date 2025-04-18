@@ -1,5 +1,7 @@
 require('dotenv').config({path:'./credentials.env'});
 
 module.exports = {
-    dbConnectionURI : process.env.dbConnectionURI,
+    devDBConnectionURI : process.env.devDBConnectionURI,
+    prodDBConnectionURI : process.env.prodDBConnectionURI,
+    sessionSecretKey:process.env.sessionSecretKey,
 };
