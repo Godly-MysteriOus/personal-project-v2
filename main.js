@@ -6,11 +6,9 @@ const path = require('path');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const csrfProtection = require(path.join(__dirname,'middleware','CSRF','csrfProtection.js'));
-const connection = require(path.join(__dirname,'DB_Utils','DB_Connection.js'));
-const cookieParser = require('cookie-parser');
+const connection = require(path.join(__dirname,'DB_Utils','DB_Connection'));
 const logger = require('./utils/Logger/logger');
 const app = express();
-
 //setting up UI Engine and pickup files
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -23,14 +21,14 @@ app.use(cors({
 }));
 
 app.use(express.json());
-app.use(cookieParser());
+// app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,'public')));
 
 //setting up session db
 const store = new MongoDBStore({
-    uri: connection.dbURI.connectionURI,
+    uri: connection.dbURI.devDBConnectionURI,
     collection: 'sessions'
 });
 
@@ -61,12 +59,13 @@ app.use((req,res,next)=>{
 
 //setting up local variables
 app.use((req,res,next)=>{
-    res.locals.csrfToken = req.csrfToken();
+    res.locals.hostURI = config.hostURI;
+    res.locals.redirectTo = 'login';
     next();
 });
+app.use(csrfProtection);
 app.get('/csrf-token',csrfProtection,(req,res,next)=>{
     const token = req.csrfToken();
-    res.cookie('XSRF-TOKEN', token);
     return res.status(200).json({
         csrfToken: token,
     });
@@ -80,9 +79,8 @@ app.get('/csrf-token',csrfProtection,(req,res,next)=>{
 // app.use('/customer',customerRoute);
 // app.use('/seller',sellerRoute);
 app.use('/',(req,res,next)=>{
-    res.render('homePage');
+    res.render('home');
 });
-
 connection.DBConnection(app,process.env.PORT|| 2100);
 app.use((err,req,res,next)=>{
     logger.error(err.message);

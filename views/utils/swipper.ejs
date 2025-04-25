@@ -1,0 +1,65 @@
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide slide1">
+            <div class="left">
+                <div class="mainText-1 special-gothic-expanded-one-regular">
+                    100 percent genuine medicines approved by Drug Controller General of India (DGCI).
+                </div>
+                <div class="subText-1 yatra-one-regular">
+                    <br><br>
+                    Every medicine we list is 100% genuine — because your health isn’t just a priority, it’s something we truly care about. Like family.
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide2">
+            <div class="left">
+                <div class="mainText-2 special-gothic-expanded-one-regular">
+                    Analytics feature for stores helps manage Inventory, Bills and Sales more efficiently.
+                </div>
+                <div class="subText-2 yatra-one-regular">
+                    <br><br>
+                    See sales trends to manage your inventory better, see daily and monthly sales report, and each order briefs
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide slide3">
+            <div class="left">
+                <div class="mainText-3 special-gothic-expanded-one-regular">
+                    Find your desired medicine at the nearest store
+                </div>
+                <div class="subText-3 yatra-one-regular">
+                    <br><br>
+                    Enable your location, type the medicine, and we’ll guide you to the nearest store — quick, easy, and worry-free.
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>

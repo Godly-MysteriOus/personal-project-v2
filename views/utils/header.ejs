@@ -1,3 +1,44 @@
-<header>
-    
+
+<header class="customerHeader">
+    <div class="companyNameAndLogo">
+        <div class="companyLogo">
+            <img src="/images/company-logo-2.png" alt="">
+        </div>
+        <div class="companyName rowdies-light">Medisure</div>
+    </div>
+    <div class="navigationBarWrapper showSidebar">
+        <div class="navigationItems">
+            <div class="homeSection navItemCss lexend">Home</div>
+            <div class="contactUsSection navItemCss lexend">Contact Us</div>
+            <div class="loginButton">
+                <button class="normalButtonCss lexend">Login</button>
+            </div>
+            <div class="signUpButton">
+                <button class="normalButtonCss lexend">Signup</button>
+            </div>
+        </div>
+    </div>
+    <div class="menuButtonMobileOnly">
+        <div class="menuBtn"><img src="/images/menu.png" alt=""></div>
+        <div class="closeBtn alternateButtonOnly"><img src="/images/close.png" alt=""></div>
+    </div>
 </header>
+
+<script>
+    const navigationBarWrapper = document.querySelector('.navigationBarWrapper');
+    const navItemCss = document.querySelectorAll('.navItemCss');
+    const menuButtonMobileOnly = document.querySelector('.menuButtonMobileOnly');
+    const menuBtn = document.querySelector('.menuBtn');
+    const closeBtn = document.querySelector('.closeBtn');
+    navigationBarWrapper.addEventListener('click',(e)=>{
+        if(e.target.closest('.navItemCss')){
+            navItemCss.forEach(navItem=>navItem.classList.remove('active'));
+           e.target.closest('.navItemCss').classList.add('active');
+        }
+    });
+    menuButtonMobileOnly.addEventListener('click',(e)=>{
+        menuBtn.classList.toggle('alternateButtonOnly');
+        closeBtn.classList.toggle('alternateButtonOnly');
+        navigationBarWrapper.classList.toggle('showSidebar');
+    });
+</script>

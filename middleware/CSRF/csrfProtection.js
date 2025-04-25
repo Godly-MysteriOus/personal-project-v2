@@ -1,4 +1,4 @@
 const csrf = require('csurf');
-const csrfProtection = csrf({cookie:true});
+const csrfProtection = csrf();
 
 module.exports = csrfProtection;

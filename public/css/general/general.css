@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    min-height:100vh;
+    position: relative;
+}
+.normalButtonCss{
+    border: none;
+    border-radius: 0.75rem;
+    background: white;
+    color: #970747;
+    padding: 0.35rem 1rem;
+    cursor: pointer;
+    border: 1px solid white;
+}
+.normalButtonCss:active{
+    background-color: aliceblue;
+}

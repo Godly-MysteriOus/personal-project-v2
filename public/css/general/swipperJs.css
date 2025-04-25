@@ -1,0 +1,120 @@
+.swiper {
+width: 100%;
+height: 80vh;
+}
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slide1{
+    background-image: url('/images/medicinePoster-2.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.slide2{
+    background-image: url('/images/medicinePoster-3.jpg');
+    background-size: cover;
+}
+.slide3{
+    background-image: url('/images/medicinePoster-5.jpg');
+    background-size: cover;
+}
+.left{
+    padding: 0.5rem 2rem;
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.special-gothic-expanded-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.yatra-one-regular{
+    font-family: "Yatra One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.15rem;
+    backdrop-filter: blur(3px);
+}
+.mainText-1,.mainText-2{
+    color: black;
+    font-size: 2.25rem;
+    backdrop-filter: blur(3px);
+}
+.subText-1,.subText-2{
+    color: black;
+}
+.mainText-3{
+    backdrop-filter: blur(3px);
+    background-image: linear-gradient(-45deg, rgb(0, 0, 0) 50%,white 40% );
+    background-clip: text;
+    color: transparent;   
+    font-size: 3rem;
+}
+.subText-3{
+    /* backdrop-filter: blur(3px); */
+    background-image: linear-gradient(-45deg, rgb(0, 0, 0) 30%,white 20% );
+    background-clip: text;
+    color: transparent;   
+}
+@media screen and (min-width:601px) and (max-width:900px) {
+    .swiper{
+        height: 60vh;
+    }
+    .left{
+        height: 50vh;
+        width: 70%;
+    }
+    .mainText-1,.mainText-2,.mainText-3{
+        font-size:clamp(1rem,4.5vw,1.5rem);
+    }
+    .subText-1,.subText-2,.subText-3{
+        font-size:clamp(0.6rem,3vw,1rem);
+    }
+}
+@media screen and (min-width:251px) and (max-width:600px) {
+    .swiper{
+        height: 40vh;
+    }
+
+    .mainText-1,.mainText-2,.mainText-3{
+        font-size:clamp(0.75rem,4vw,1.25rem);
+    }
+    .left{
+        width: 80vw;
+        height: 35vh;
+        padding: 0.5rem 1rem;
+    }
+    .subText-1,.subText-2,.subText-3{
+        font-size:clamp(0.6rem,3vw,1rem);
+    }
+    .swiper-button-next,.swiper-button-prev{
+        height: 1.75rem;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:250px) {
+    .swiper{
+        height: 30vh;
+    }
+    .mainText-1,.mainText-2,.mainText-3{
+        font-size:clamp(0.75rem,4vw,1.25rem);
+    }
+    .left{
+        width: 80vw;
+        height: 35vh;
+        padding: 0.5rem 1rem;
+    }
+    .subText-1,.subText-2,.subText-3{
+        font-size:clamp(0.5rem,3vw,1rem);
+    }
+    .swiper-button-next,.swiper-button-prev{
+        height: 1.25rem;
+        overflow: hidden;
+    }
+}

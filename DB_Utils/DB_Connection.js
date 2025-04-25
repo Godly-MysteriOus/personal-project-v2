@@ -13,6 +13,6 @@ exports.DBConnection = (app,PORT) =>{
         logger.info('Connection Successfull');
     })
     .catch(err=>{
-        console.log(err.stack);
+        logger.error('Error connecting to database',err);
     });
 };
