@@ -1,0 +1,50 @@
+footer{
+    min-height: 40dvh;
+    background: black;
+    color: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 12.5px;
+}
+.specialMessage{
+    display: flex;
+    justify-content: center;
+}
+.heartIcon{
+    display: flex;
+}
+.heartIcon img{
+    height: 1.05rem;
+}
+.newsLetterSubscription{
+    /* width: 50vw; */
+    padding: 1rem 0rem;
+   display: flex;
+   justify-content: center;
+}
+.subscriptionEmail{
+    background-color: rgba(240, 248, 255, 0.148);
+    color: whitesmoke;
+    border: none;
+}
+.newsLetter{
+    display: flex;
+    align-items: center;
+}
+.submitBtnNewsLetter{
+    padding: 0.15rem 1rem;
+    background-color: rgba(240, 248, 255, 0.8);
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+.socails{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.socialHandle a{
+    color: white;
+    text-decoration: none;
+}
