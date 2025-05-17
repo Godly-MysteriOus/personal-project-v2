@@ -1,9 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const csrfProtectionV2 = require(path.join('..','middleware','CSRF','csrfProtection'));
-const commonControllerV2 = require(path.join('..','controllers','commonController'));
-router.post('/subscribe-to-newsletter',csrfProtectionV2,commonControllerV2.postSubscriptionToNewsLetter);
-
+const csrfProtection = require('../middleware/CSRF/csrfProtection');
+const commonController = require('../controllers/commonController');
+const rateLimit = require('../utils/RateLimiter/rateLimiter');
+const checks = require('../utils/check/check');
+router.post('/subscribe-to-newsletter',[checks.emailValidation('emailId')],rateLimit,csrfProtection,commonController.postSubscriptionToNewsLetter);
+router.post('/raise-user-query',
+    [checks.emailValidation('emailId'),checks.mobileNumberValidation('mobileNo'),checks.basicMessageValidation('message')],
+    rateLimit,csrfProtection,commonController.postUserQueries
+);
 
 module.exports = router;

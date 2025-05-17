@@ -26,8 +26,14 @@
 </footer>
 
 <script>
+    const emailRegex = /^[a-z0-9]+([\.\-\_][a-z0-9]+)*@[a-z0-9]+(\.[a-z]{2,10})+$/;
+    const subscriptionEmail = document.querySelector('.subscriptionEmail');
     const submitBtnNewsLetter = document.querySelector('.submitBtnNewsLetter');
     submitBtnNewsLetter.addEventListener('click',async(e)=>{
+        if(!emailRegex.test(String(subscriptionEmail.value).toLowerCase().trim())){
+            messageDisplayAndHide('Invalid Email Syntax');
+            return;
+        }
         const csrfToken = await getCsrfToken();
         const response = await fetch(url+'common/subscribe-to-newsletter',{
             method: 'POST',
@@ -36,10 +42,14 @@
                 'CSRF-Token': csrfToken,
             },
             body:JSON.stringify({
-                emailId: submitBtnNewsLetter.value,
+                emailId: String(subscriptionEmail.value).toLowerCase().trim(),
             }),
         });
+        console.log(response);
         const result = await response.json();
+        if(result.success){
+            subscriptionEmail.value = '';
+        }
         messageDisplayAndHide(result.message);
     });
 </script>
