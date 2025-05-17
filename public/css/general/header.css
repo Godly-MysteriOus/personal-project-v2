@@ -1,5 +1,4 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rowdies:wght@300;400;700&family=Special+Gothic+Expanded+One&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rowdies:wght@300;400;700&family=Special+Gothic+Expanded+One&family=Yatra+One&display=swap');
 .customerHeader{
     width: 100%;
     background: #970747;
@@ -9,6 +8,9 @@
     justify-content: space-between;
     height: 4rem;
     overflow-y: hidden;
+    transition: all 1s ease;
+    position: relative;
+    z-index: 4;
 }
 .companyNameAndLogo{
     display: flex;
@@ -29,16 +31,7 @@
     font-weight: 300;
     font-style: normal;
 }
-.rowdies-light {
-    font-family: "Rowdies", sans-serif;
-}
 
-.lexend {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 .navigationBarWrapper{
     display: flex;
     gap: 1rem;
@@ -53,10 +46,11 @@
     transition: 0.5s ease;
     padding: 0.5rem;
 }
-.active{
+.active,.activeTab{
     transition: 0.3s ease;
     transform: translateY(-10%);
     border-bottom: 1.5px solid rgb(241, 242, 241);
+    position: relative;
 }
 .navigationItems{
     display: flex;
@@ -105,13 +99,13 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100vh;
+        height: 100dvh;
         width: 40%;
     }
     .navigationItems{
         margin-top: 5rem;
         display: grid;
-        height: 50vh;
+        height: 50dvh;
     }
     .navItemCss,.lexend{
         color: #444;
@@ -133,7 +127,7 @@
     .navigationItems{
         margin-top: 5rem;
         display: grid;
-        height: 50vh;
+        height: 50dvh;
     }
     .navigationBarWrapper{
         z-index: 5;
@@ -143,7 +137,7 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100vh;
+        height: 100dvh;
         width: 40%;
     }
     .navItemCss,.lexend{
@@ -175,7 +169,7 @@
     .navigationItems{
         margin-top: 5rem;
         display: grid;
-        height: 50vh;
+        height: 50dvh;
     }
     .navigationBarWrapper{
         z-index: 5;
@@ -185,7 +179,7 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100vh;
+        height: 100dvh;
         width: 70%;
     }
     .navItemCss,.lexend{

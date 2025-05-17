@@ -1,13 +1,57 @@
 <%- include('./utils/start.ejs') %>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <link rel="stylesheet" href="/css/general/swipperJs.css">
+<link rel="stylesheet" href="/css/general/homePage.css">
 </head>
 <%- include('./utils/header.ejs') %>
-<body class="body">
+<%- include('./utils/bodyStarter.ejs') %>
     <div class="pageContentWrapper">
         <%- include('./utils/swipper.ejs') %>
+        <div class="navigationTip">  
+            <br>
+            <div class="navigationHeader rowdies-light">How to Use ? <br><br></div>
+            <div class="navigationTipWrapper"></div>
+        </div>
+        <div id="AboutUsSection">
+            <div class="aboutSectionCompanyNameHolder rowdies-light">Medisure</div>
+            <div class="companyInfo lexend">
+               
+            </div>
+            <br><br><br>
+            <div class="whyChoseUs">
+                <div class="whyChoseUsHeader">Why Choose Medisure ?</div>
+                <div class="bulletPointWrapper">
+                </div>
+            </div>
+            <br><br><br>
+            <div class="tabbedContentHolder">
+                <div class="tabbedContentHeadingHolder"></div>
+                <div class="tabbedContentDataHolder"></div>
+            </div>
+        </div>
+        <div id="contantUsSection">
+            <div class="contactSectionWrapper">
+                <div class="contactSectionTextWrapper">
+                    <h1>Get in touch with us</h1>
+                    <p>Drop your details here</p>
+                </div>
+                <br><br>
+                <div class="formWrapper">
+                    <form>
+                        <%- include('./utils/formField.ejs',{fieldName: 'Email Id', required: true, isTextArea:false, rowCount:0, colCount:0, fieldType:'email',fieldClassName:'customerEmailId', placeHolderValue: 'Enter Email Id', isFile:false, fileType:'', isDisabled:false}) %>
+                        <%- include('./utils/formField.ejs',{fieldName: 'Phone number',required:true,isTextArea:false, rowCount:0, colCount:0,fieldType:'number',fieldClassName:'customerPhoneNumber',placeHolderValue:'Enter mobile Number', isFile:false,fileType:'',isDisabled:false}) %>
+                        <%- include('./utils/formField.ejs',{fieldName: 'Message', required:true,isTextArea:true,rowCount:3,colCount:30,fieldType:'',fieldClassName:'customerMessage',placeHolderValue:'Enter Message',isFile:'',fileType:'',isDisabled:false}) %>
+                        <div class="buttonWrapper">
+                            <button class="resetBtnCss commonCss" type="reset">Reset</button>
+                            <button class="submitBtn submitBtnCss commonCss" type="button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('./utils/footer.ejs') %>
     </div>
 </body>
-<%- include('./utils/footer.ejs') %>
-
 </html>
+<script src="/scripts/homePage/functional.js"></script>
+<script src="/scripts/homePage/homePageDataView.js"></script>

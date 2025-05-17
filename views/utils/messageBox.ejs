@@ -1,0 +1,27 @@
+<style>
+    .messageWrapper{
+        position: absolute;
+        top: 0;
+        display: grid;
+        place-items: center;
+        z-index: 50;
+        width: 100%;
+    }
+    .message{
+        width: fit-content;
+        padding: 0.25rem 1rem;
+        border-radius: 0.25rem;
+        background-color: rgba(240, 248, 255, 0.69);
+    }
+    .message-hidden{
+        display:none;
+    }
+</style>
+
+<div class="messageWrapper message-hidden">
+    <div class="message">Hi</div>
+</div>
+<script>
+    const messageWrapper = document.querySelector('.messageWrapper');
+    const message = document.querySelector('.message');
+</script>

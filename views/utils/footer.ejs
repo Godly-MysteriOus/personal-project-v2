@@ -1,3 +1,55 @@
-<footer class="footer">
-
+<link rel="stylesheet" href="/css/general/footer.css">
+<footer class="footer poppins-regular">
+    <div class="footerWrapper">
+        <div class="mainText">
+            &#169; 2025, Medisure. All rights reserved. All the content of this website are protected by copyright law. Any unauthorized use, reproduction, or distribution is strictly prohibited. This website is developed and owned by Jayant Singh. For any queries contact at singhrajputjayant8@gmail.com.
+        </div>
+        <br>
+        <div class="specialMessage">Crafted with&nbsp;<span class="heartIcon"><img src="/images/heart.png" alt="" srcset=""></span> &nbsp;in Bhopal, Madhya Pradesh</div>
+    </div><br>
+    <div class="newsLetterSubscription">
+        <form class="newsLetter" action="">
+            <div class="subscriptionWrapper">Subscribe to our news letter - <input class="subscriptionEmail" type="email" placeholder="Enter EmailId" required></div> &nbsp;&nbsp;
+            <div class="buttonHolder">
+                <button type="button" class="submitBtnNewsLetter">Subscribe</button>
+            </div>
+        </form>
+    </div><br>
+    <div class="socails">
+        <div class="socialHandle">Follow Me On - </div>
+        <div class="socialHandle"><a href="https://github.com/Godly-MysteriOus" target="_blank">Github</a></div>
+        <div class="socialHandle"><a href="https://www.linkedin.com/in/jayant-singh-73857725b/" target="_blank">LinkedIn</a></div>
+        <div class="socialHandle"><a href="https://www.instagram.com/jayant_singh_._/" target="_blank">Instagram</a></div>
+        <div></div>
+    </div>
+    
 </footer>
+
+<script>
+    const emailRegex = /^[a-z0-9]+([\.\-\_][a-z0-9]+)*@[a-z0-9]+(\.[a-z]{2,10})+$/;
+    const subscriptionEmail = document.querySelector('.subscriptionEmail');
+    const submitBtnNewsLetter = document.querySelector('.submitBtnNewsLetter');
+    submitBtnNewsLetter.addEventListener('click',async(e)=>{
+        if(!emailRegex.test(String(subscriptionEmail.value).toLowerCase().trim())){
+            messageDisplayAndHide('Invalid Email Syntax');
+            return;
+        }
+        const csrfToken = await getCsrfToken();
+        const response = await fetch(url+'common/subscribe-to-newsletter',{
+            method: 'POST',
+            headers : {
+                'Content-Type':'application/json',
+                'CSRF-Token': csrfToken,
+            },
+            body:JSON.stringify({
+                emailId: String(subscriptionEmail.value).toLowerCase().trim(),
+            }),
+        });
+        console.log(response);
+        const result = await response.json();
+        if(result.success){
+            subscriptionEmail.value = '';
+        }
+        messageDisplayAndHide(result.message);
+    });
+</script>
