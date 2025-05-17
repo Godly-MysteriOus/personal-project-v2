@@ -12,7 +12,7 @@ const app = express();
 //setting up UI Engine and pickup files
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
+app.set('trust proxy', 1);
 // Setting up CORS policies
 app.use(cors({
     origin: '*', // Replace with your front-end URL
