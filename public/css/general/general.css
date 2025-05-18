@@ -179,3 +179,28 @@
 textarea{
     resize: none;
 }
+
+/* vertical scroll */
+.tabbedContentDataHolder::-webkit-scrollbar{
+  width: 3px;
+}
+  
+.tabbedContentDataHolder::-webkit-scrollbar-track{
+    background: #00000074;
+    border-radius: 5px;
+}
+  
+.tabbedContentDataHolder::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+}
+
+.navigationTipWrapper::-webkit-scrollbar{
+    height: 3px;
+}
+.navigationTipWrapper::-webkit-scrollbar-track{
+    background-color: rgba(174, 217, 255, 0.382);
+    border-radius: 5px;
+}
+.navigationTipWrapper::-webkit-scrollbar-thumb{
+    height: 3px;
+}

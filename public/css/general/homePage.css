@@ -75,6 +75,7 @@
 .companyInfo{
     padding: 1rem 0rem;
     font-size: 14.5px;
+    color: white;
 }
 
 .whyChoseUs{
@@ -137,6 +138,7 @@
 
 #contantUsSection{
     min-height: 90dvh;
+    width: 100%;
     display: grid;
     place-items: center;
     background-color: rgb(232, 253, 253);
@@ -159,4 +161,81 @@
     display: flex;
     justify-content: space-evenly;
     padding: 1rem 0rem;
+}
+.tabbedContentDataHolder::-webkit-scrollbar-thumb,.tabbedContentDataHolder::-webkit-scrollbar-thumb:hover {
+    background-color: #970747;
+}
+.navigationTipWrapper::-webkit-scrollbar-thumb,.navigationTipWrapper::-webkit-scrollbar-thumb:hover{
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+@media screen and (min-width:200px) {
+    .pageContentWrapper{
+        height: 90dvh;
+        overflow-y: scroll;
+    }
+    .navigationTipWrapper{
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: scroll;
+        height: fit-content;
+        padding: 2rem 0rem;
+    }
+    .card{
+        min-width: 10rem;
+        max-width: 10rem;
+        min-height: 12rem;
+        max-height: 12rem;
+    }
+    .cardImage img{
+        width: 1.5rem;
+    }
+    .cardHeader{
+        font-size: 12px;
+    }
+    .cardDescription{
+        font-size: 10px;
+    }
+    .card:hover{
+        transform: scale(1);
+    }
+    .aboutSectionCompanyNameHolder{
+        font-size: 2rem;
+    }
+    .companyInfo{
+        font-size: 11px;
+    }
+    .whyChoseUsHeader{
+        font-size: 1.25rem;
+    }
+    .bulletPointWrapper{
+        font-size: 11.5px;
+    }
+    .tabbedContentHolder{
+        width: 100%;
+    }
+    .tabbedContentHeadingHolder{
+        font-size: 12px;
+    }
+    .tabbedContentDataHolder{
+        font-size: 11.5px;
+    }
+    .contactSectionWrapper{
+        width: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .contactSectionTextWrapper{
+        font-size: 0.75rem;
+    }
+    .formWrapper{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .formWrapper form{
+        font-size: 12px;
+    }
+    .formWrapper form input, .formWrapper form textarea{
+        width: 100%;
+    }
 }

@@ -43,8 +43,35 @@ footer{
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 .socialHandle a{
     color: white;
     text-decoration: none;
+}
+
+@media screen  and (min-width:200px) {
+    footer{
+        padding: 2rem 0rem;
+        font-size: 10px;
+    }
+    .newsLetter{
+        display: grid;
+    }
+    .submitBtnNewsLetter{
+        padding: 0.15rem 0.5rem;
+    }
+    .buttonHolder{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .buttonHolder input{
+        width: 60%;
+    }
+    .socails{
+        width: 100%;
+    }
+    .socialHandle-1{
+        width: fit-content;
+    }
 }
