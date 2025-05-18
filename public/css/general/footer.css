@@ -50,7 +50,33 @@ footer{
     text-decoration: none;
 }
 
-@media screen  and (min-width:200px) {
+@media screen and (min-width:401px) and (max-width:900px){
+    footer{
+        padding: 2rem 0.5rem;
+        font-size: 11px;
+    }
+    .newsLetter{
+        width: 95%;
+        display: grid;
+    }
+    .submitBtnNewsLetter{
+        padding: 0.15rem 1rem;
+    }
+    .buttonHolder{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .buttonHolder input{
+        width: 50%;
+    }
+    .socails{
+        width: 100%;
+    }
+    .socialHandle-1{
+        width: fit-content;
+    }
+}
+@media screen  and (min-width:200px) and (max-width:400px) {
     footer{
         padding: 2rem 0.25rem;
         font-size: 10px;

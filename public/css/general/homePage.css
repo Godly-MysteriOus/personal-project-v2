@@ -166,7 +166,8 @@
     height: 3px;
     background-color: rgba(0, 0, 0, 0.61);
 }
-@media screen and (min-width:200px) {
+
+@media screen and (min-width:401px) and (max-width:900px) {
     .pageContentWrapper{
         height: 91vh;
     }
@@ -175,7 +176,79 @@
         width: 100%;
         overflow-x: scroll;
         height: fit-content;
-        padding: 2rem 0rem;
+        padding: 2rem 0.5rem;
+    }
+    .card{
+        min-width: 10rem;
+        max-width: 10rem;
+        min-height: 15rem;
+        max-height: 15rem;
+    }
+    .cardImage img{
+        width: 2rem;
+    }
+    .cardHeader{
+        font-size: 14px;
+    }
+    .cardDescription{
+        font-size: 12.5px;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .aboutSectionCompanyNameHolder{
+        font-size: 2.25rem;
+    }
+    .companyInfo{
+        font-size: 13px;
+    }
+    .whyChoseUsHeader{
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    .bulletPointWrapper{
+        font-size: 13px;
+    }
+    .tabbedContentHolder{
+        width : max(22rem,65vw);
+    }
+    .tabbedContentHeadingHolder{
+        font-size: 13px;
+        padding: 0.25rem 0rem;
+        height: 2rem;
+    }
+    .tabbedContentDataHolder{
+        font-size: 11.5px;
+    }
+    .contactSectionWrapper{
+        width: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .contactSectionTextWrapper{
+        font-size: 0.75rem;
+    }
+    .formWrapper{
+        width: max(22rem,45vw);
+        margin: 0 auto;
+    }
+    .formWrapper form{
+        font-size: 13px;
+    }
+    .formWrapper form input, .formWrapper form textarea{
+        width: 95%;
+    }
+}
+@media screen and (min-width:200px)  and (max-width:400px){
+    .pageContentWrapper{
+        height: 91vh;
+    }
+    .navigationTipWrapper{
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: scroll;
+        height: fit-content;
+        padding: 2rem 0.5rem;
     }
     .card{
         min-width: 10rem;
@@ -202,7 +275,8 @@
         font-size: 12px;
     }
     .whyChoseUsHeader{
-        font-size: 1.25rem;
+        font-size: 1.15rem;
+        font-weight: 600;
     }
     .bulletPointWrapper{
         font-size: 12.25px;

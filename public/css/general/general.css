@@ -7,7 +7,6 @@
 html{
     height: 100vh;
     overflow: hidden;
-    border: 1px solid red;
 }
 .body{
     width: 100%;
