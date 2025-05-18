@@ -1,17 +1,14 @@
 .pageContentWrapper{
-    height: 89dvh;
+    height: 89vh;
     overflow-y: scroll;
 }
 .pageContentWrapper::-webkit-scrollbar {
     display: none;
 }
-.pageContentWrapper {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;     /* Firefox */
-}
+
 .navigationTip{
     width: 100%;
-    min-height: 60dvh;
+    min-height: 60vh;
     padding: 4rem 1rem;
     background-color: rgb(232, 253, 253);
 }
@@ -59,7 +56,7 @@
 
 /* About Us Section */
 #AboutUsSection{
-    min-height: 60dvh;
+    min-height: 60vh;
     background-color: rgb(2, 9, 44);
     padding: 2rem 1rem;
     color: azure;
@@ -137,7 +134,7 @@
 }
 
 #contantUsSection{
-    min-height: 90dvh;
+    min-height: 90vh;
     width: 100%;
     display: grid;
     place-items: center;
@@ -148,7 +145,7 @@
 }
 .formWrapper{
     width: 40vw;
-    min-height: 30dvh;
+    min-height: 30vh;
     border: 1px solid rgba(0, 0, 0, 0.311);
     background: rgba(240, 248, 255, 0.619);
     border: 1px solid rgba(21, 203, 231, 0.695);
@@ -171,8 +168,7 @@
 }
 @media screen and (min-width:200px) {
     .pageContentWrapper{
-        height: 90dvh;
-        overflow-y: scroll;
+        height: 91vh;
     }
     .navigationTipWrapper{
         flex-wrap: nowrap;
