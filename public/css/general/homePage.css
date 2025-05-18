@@ -184,8 +184,8 @@
     .card{
         min-width: 10rem;
         max-width: 10rem;
-        min-height: 12rem;
-        max-height: 12rem;
+        min-height: 14rem;
+        max-height: 14rem;
     }
     .cardImage img{
         width: 1.5rem;
@@ -194,7 +194,7 @@
         font-size: 12px;
     }
     .cardDescription{
-        font-size: 10px;
+        font-size: 10.5px;
     }
     .card:hover{
         transform: scale(1);
@@ -203,19 +203,21 @@
         font-size: 2rem;
     }
     .companyInfo{
-        font-size: 11px;
+        font-size: 12px;
     }
     .whyChoseUsHeader{
         font-size: 1.25rem;
     }
     .bulletPointWrapper{
-        font-size: 11.5px;
+        font-size: 12.25px;
     }
     .tabbedContentHolder{
         width: 100%;
     }
     .tabbedContentHeadingHolder{
         font-size: 12px;
+        padding: 0.25rem 0rem;
+        height: 2rem;
     }
     .tabbedContentDataHolder{
         font-size: 11.5px;
