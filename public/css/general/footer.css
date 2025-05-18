@@ -52,10 +52,11 @@ footer{
 
 @media screen  and (min-width:200px) {
     footer{
-        padding: 2rem 0rem;
+        padding: 2rem 0.25rem;
         font-size: 10px;
     }
     .newsLetter{
+        width: 95%;
         display: grid;
     }
     .submitBtnNewsLetter{
@@ -66,7 +67,7 @@ footer{
         justify-content: space-evenly;
     }
     .buttonHolder input{
-        width: 60%;
+        width: 65%;
     }
     .socails{
         width: 100%;
