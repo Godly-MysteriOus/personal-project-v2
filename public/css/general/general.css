@@ -5,8 +5,11 @@
     box-sizing: border-box;
 }
 html{
-    height: 100vh;
-    overflow: hidden;
+    height: 100dvh;
+    /* overflow: hidden; */
+}
+html::-webkit-scrollbar{
+    display: none;
 }
 .body{
     width: 100%;
@@ -198,6 +201,7 @@ textarea{
     border-radius: 5px;
 }
 
+/* horizontal Scroll */
 .navigationTipWrapper::-webkit-scrollbar{
     height: 3px;
 }
