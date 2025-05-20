@@ -5,4 +5,12 @@ async function getCsrfToken(){
     });
     const result = await response.json();
     return result.csrfToken;
-}
+};
+
+function messageDisplayAndHide(responseMessage){
+    messageWrapper.classList.remove('message-hidden');
+    message.textContent = responseMessage;
+    setTimeout(()=>{
+        messageWrapper.classList.add('message-hidden');
+    },3000);
+};

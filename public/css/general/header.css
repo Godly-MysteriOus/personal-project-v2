@@ -1,5 +1,4 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rowdies:wght@300;400;700&family=Special+Gothic+Expanded+One&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Rowdies:wght@300;400;700&family=Special+Gothic+Expanded+One&family=Yatra+One&display=swap');
 .customerHeader{
     width: 100%;
     background: #970747;
@@ -8,7 +7,10 @@
     align-items: center;
     justify-content: space-between;
     height: 4rem;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
+    transition: all 1s ease;
+    position: relative;
+    z-index: 4;
 }
 .companyNameAndLogo{
     display: flex;
@@ -29,16 +31,7 @@
     font-weight: 300;
     font-style: normal;
 }
-.rowdies-light {
-    font-family: "Rowdies", sans-serif;
-}
 
-.lexend {
-    font-family: "Lexend", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
 .navigationBarWrapper{
     display: flex;
     gap: 1rem;
@@ -53,10 +46,11 @@
     transition: 0.5s ease;
     padding: 0.5rem;
 }
-.active{
+.active,.activeTab{
     transition: 0.3s ease;
     transform: translateY(-10%);
     border-bottom: 1.5px solid rgb(241, 242, 241);
+    position: relative;
 }
 .navigationItems{
     display: flex;
@@ -82,12 +76,6 @@
     display: none;
 }
 @media screen and (min-width:601px) and (max-width:900px) {
-    .navigationBarWrapper{
-        width: 55%;
-    }
-    .navigationItems{
-        width: 100%;
-    }
     .navItemCss{
         font-size: 13px;
     }
@@ -105,13 +93,14 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100vh;
-        width: 40%;
+        height: 100dvh;
+        width: max(10rem,25%);
     }
     .navigationItems{
         margin-top: 5rem;
         display: grid;
-        height: 50vh;
+        height: 50dvh;
+        width: 100%;
     }
     .navItemCss,.lexend{
         color: #444;
@@ -133,7 +122,7 @@
     .navigationItems{
         margin-top: 5rem;
         display: grid;
-        height: 50vh;
+        height: 50dvh;
     }
     .navigationBarWrapper{
         z-index: 5;
@@ -143,8 +132,8 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100vh;
-        width: 40%;
+        height: 100dvh;
+        width: max(10rem,25%);
     }
     .navItemCss,.lexend{
         color: #444;
@@ -167,6 +156,9 @@
     .companyName{
         font-size: 1.5rem;
     }
+    .menuBtn img,.closeBtn img{
+        width: 1.45rem;
+    }
 }
 @media screen and (max-width:400px) {
     .menuButtonMobileOnly{
@@ -175,7 +167,7 @@
     .navigationItems{
         margin-top: 5rem;
         display: grid;
-        height: 50vh;
+        height: 50dvh;
     }
     .navigationBarWrapper{
         z-index: 5;
@@ -185,8 +177,8 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100vh;
-        width: 70%;
+        height: 100dvh;
+        width: max(10rem,20%);
     }
     .navItemCss,.lexend{
         color: #444;
@@ -194,22 +186,19 @@
     .closeBtn{
        filter: invert(1);
     }
-    .closeBtn img{
-        width: 1.25rem;
-    }
     .showSidebar{
         display: none;
     }
     .companyNameAndLogo{
-        width: 6rem;
+        width: 7.5rem;
     }
     .companyLogo img{
-        width: 1.75rem;
+        width: 2rem;
     }
     .companyName{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .menuBtn img,.closeBtn img{
-        width: 1.25rem;
+        width: 1.35rem;
     }
 }
