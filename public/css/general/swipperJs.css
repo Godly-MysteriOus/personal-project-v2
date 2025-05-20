@@ -1,6 +1,6 @@
 .swiper {
 width: 100%;
-height: 80vh;
+height: 80dvh;
 }
 .swiper-slide{
     display: flex;
@@ -24,7 +24,7 @@ height: 80vh;
 .left{
     padding: 0.5rem 2rem;
     width: 50%;
-    height: 60vh;
+    height: 60dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,10 +64,10 @@ height: 80vh;
 }
 @media screen and (min-width:601px) and (max-width:900px) {
     .swiper{
-        height: 60vh;
+        height: 60dvh;
     }
     .left{
-        height: 50vh;
+        height: 50dvh;
         width: 70%;
     }
     .mainText-1,.mainText-2,.mainText-3{
@@ -79,7 +79,7 @@ height: 80vh;
 }
 @media screen and (min-width:251px) and (max-width:600px) {
     .swiper{
-        height: 40vh;
+        height: 40dvh;
     }
 
     .mainText-1,.mainText-2,.mainText-3{
@@ -87,7 +87,7 @@ height: 80vh;
     }
     .left{
         width: 80vw;
-        height: 35vh;
+        height: 35dvh;
         padding: 0.5rem 1rem;
     }
     .subText-1,.subText-2,.subText-3{
@@ -100,14 +100,14 @@ height: 80vh;
 }
 @media screen and (max-width:250px) {
     .swiper{
-        height: 30vh;
+        height: 30dvh;
     }
     .mainText-1,.mainText-2,.mainText-3{
         font-size:clamp(0.75rem,4vw,1.25rem);
     }
     .left{
         width: 80vw;
-        height: 35vh;
+        height: 35dvh;
         padding: 0.5rem 1rem;
     }
     .subText-1,.subText-2,.subText-3{

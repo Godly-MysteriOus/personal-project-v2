@@ -12,7 +12,7 @@ const app = express();
 //setting up UI Engine and pickup files
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
+app.set('trust proxy', 1);
 // Setting up CORS policies
 app.use(cors({
     origin: '*', // Replace with your front-end URL
@@ -63,7 +63,7 @@ app.use((req,res,next)=>{
     res.locals.redirectTo = 'login';
     next();
 });
-app.use(csrfProtection);
+// app.use(csrfProtection);
 app.get('/csrf-token',csrfProtection,(req,res,next)=>{
     const token = req.csrfToken();
     return res.status(200).json({
@@ -74,10 +74,11 @@ app.get('/csrf-token',csrfProtection,(req,res,next)=>{
 // const loginLogoutRoute = require('./routes/login_logout');
 // const sellerRoute = require('./routes/sellerRoute');
 // const customerRoute = require('./routes/customerRoute');
-
+const commonRoute = require('./routes/commonRoute');
 // app.use('/signup',signupAuthRoute);
 // app.use('/customer',customerRoute);
 // app.use('/seller',sellerRoute);
+app.use('/common',commonRoute);
 app.use('/',(req,res,next)=>{
     res.render('home');
 });

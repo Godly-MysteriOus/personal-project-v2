@@ -1,0 +1,63 @@
+<style>
+    .formField{
+        width: 100%;
+        padding: 1rem 0rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .fieldName{
+        display: flex;
+        width: 40%;
+        text-align: center;
+    }
+    .inputHolder{
+        width: 60%;
+    }
+    .required{
+        color: red;
+    }
+    input,textarea{
+        border: none;
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+</style>
+
+<div class="formField">
+    <div class="fieldName">
+        <%= fieldName %> 
+        <div class="required"><% if (required){ %> &nbsp;*<% } %></div>
+    </div>
+    <div class="inputHolder">
+        <% if (isTextArea) { %>
+        <textarea
+            rows="<%= rowCount %>" 
+            cols="<%= colCount %>" 
+            class="<%= fieldClassName %>" 
+            placeholder="<%= placeHolderValue %>" 
+            <% if (isDisabled) { %>disabled<% } %>
+        ></textarea>
+        <% }else{%>
+            <input type="<%= fieldType %>" 
+            class="<%= fieldClassName %>" 
+            placeholder="<%= placeHolderValue %>" 
+            <% if (isFile) { %>accept ="<%= fileType %>"<% } %>
+            <% if (isDisabled) { %>disabled<% } %> 
+            >
+        <%}%>
+    </div>
+</div>
+
+<!-- variables
+    fieldName -- to provide name to the input field
+    isTextArea -- to decide whether input field should be of type textarea or input
+    nameAttribute -- unique name such that server could identify 
+    rowCount, colCount => in case of textarea. 
+    placeHolderValue -- to display placeHolder text
+    fieldType -- to provide input type value
+    isFile -- used when input type is file
+    fileType -- type of file, it could accept
+-->

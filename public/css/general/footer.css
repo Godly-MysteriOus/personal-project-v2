@@ -1,0 +1,105 @@
+footer{
+    min-height: fit-content;
+    max-height: 40dvh;
+    background: black;
+    color: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 12.5px;
+}
+.specialMessage{
+    display: flex;
+    justify-content: center;
+}
+.heartIcon{
+    display: flex;
+}
+.heartIcon img{
+    height: 1.05rem;
+}
+.newsLetterSubscription{
+    /* width: 50vw; */
+    padding: 1rem 0rem;
+   display: flex;
+   justify-content: center;
+}
+.subscriptionEmail{
+    background-color: rgba(240, 248, 255, 0.148);
+    color: whitesmoke;
+    border: none;
+}
+.newsLetter{
+    display: flex;
+    align-items: center;
+}
+.submitBtnNewsLetter{
+    padding: 0.15rem 1rem;
+    background-color: rgba(240, 248, 255, 0.8);
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+.socails{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.socialHandle a{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (min-width:401px) and (max-width:900px){
+    footer{
+        padding: 2rem 0.5rem;
+        font-size: 11px;
+    }
+    .newsLetter{
+        width: 95%;
+        display: grid;
+    }
+    .submitBtnNewsLetter{
+        padding: 0.15rem 1rem;
+    }
+    .buttonHolder{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .buttonHolder input{
+        width: 50%;
+    }
+    .socails{
+        width: 100%;
+    }
+    .socialHandle-1{
+        width: fit-content;
+    }
+}
+@media screen  and (min-width:200px) and (max-width:400px) {
+    footer{
+        padding: 2rem 0.25rem;
+        font-size: 10px;
+    }
+    .newsLetter{
+        width: 95%;
+        display: grid;
+    }
+    .submitBtnNewsLetter{
+        padding: 0.15rem 0.5rem;
+    }
+    .buttonHolder{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .buttonHolder input{
+        width: 65%;
+    }
+    .socails{
+        width: 100%;
+    }
+    .socialHandle-1{
+        width: fit-content;
+    }
+}

@@ -1,0 +1,313 @@
+.pageContentWrapper{
+    height: 89vh;
+    overflow-y: scroll;
+}
+.pageContentWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.navigationTip{
+    width: 100%;
+    min-height: 60vh;
+    padding: 4rem 1rem;
+    background-color: rgb(232, 253, 253);
+}
+.navigationTipWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.navigationHeader{
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 0rem 1rem;
+}
+.card{
+    width: 12rem;
+    min-height: 15rem;
+    border: 1px solid rgba(21, 203, 231, 0.695);
+    display: grid;
+    place-content: center;
+    padding: 1rem 0.5rem;
+    background: aliceblue;
+    transition: all 0.5s ease;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+.cardImage{
+    display: grid;
+    place-items: center;
+}
+.cardImage img{
+    width: 2rem;
+}
+.cardHeader{
+    font-size: 14px;
+}
+.cardDescription{
+    font-size: 12px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+/* About Us Section */
+#AboutUsSection{
+    min-height: 60vh;
+    background-color: rgb(2, 9, 44);
+    padding: 2rem 1rem;
+    color: azure;
+}
+.aboutSectionCompanyNameHolder{
+    width: fit-content;
+    font-size: 4rem;
+    font-weight: 300;
+    background-image: linear-gradient(120deg, #d5085e 0%, #c61006c4 100%);
+    background-clip: text;
+    color: transparent;
+}
+.companyInfo{
+    padding: 1rem 0rem;
+    font-size: 14.5px;
+    color: white;
+}
+
+.whyChoseUs{
+    padding: 3rem 0rem;
+}
+.whyChoseUsHeader{
+    font-size: 1.5rem;
+}
+.bulletPointWrapper{
+    padding: 1rem 0rem;
+}
+.bulletPoint{
+    display: flex;
+}
+.bulletPointImage,.tabbedContentPointImageHolder{
+    display: grid;
+    place-items: center;
+}
+.bulletPointImage img,.tabbedContentPointImageHolder img{
+    width: 1rem;
+}
+.bulletPointText{
+    padding: 1rem 0.5rem;
+}
+.tabComponentHeader{
+    cursor: pointer;
+}
+.tabbedContentHolder{
+    width: 70%;
+    margin: 0 auto;
+}
+.tabbedContentHeadingHolder{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    padding: 1rem 0rem;
+    transform: all 0.5s ease;
+    height: 10vh;
+}
+.tabbedContentDataHolder{
+    border-top: 2px solid lightgrey;
+    height: 30vh;
+    overflow-y:scroll ;
+}
+.tabbedContent{
+    display:none;
+}
+.activeTabContent{
+    display: block;
+}
+.points{
+    display: flex;
+    padding: 1rem 0.5rem;
+    align-items: start;
+    gap: 0.5rem;
+}
+.activeTab{
+    border-bottom: 2px solid #970747;
+}
+
+#contantUsSection{
+    min-height: 90vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(232, 253, 253);
+}
+.contactSectionTextWrapper{
+    text-align: center;
+}
+.formWrapper{
+    width: 40vw;
+    min-height: 30vh;
+    border: 1px solid rgba(0, 0, 0, 0.311);
+    background: rgba(240, 248, 255, 0.619);
+    border: 1px solid rgba(21, 203, 231, 0.695);
+    box-shadow: 1px 1px 10px  rgba(21, 203, 231, 0.395) inset;
+    padding: 1rem;
+    /* background: #fff7f04c; */
+    border-radius: 0.5rem;
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0rem;
+}
+.tabbedContentDataHolder::-webkit-scrollbar-thumb,.tabbedContentDataHolder::-webkit-scrollbar-thumb:hover {
+    background-color: #970747;
+}
+.navigationTipWrapper::-webkit-scrollbar-thumb,.navigationTipWrapper::-webkit-scrollbar-thumb:hover{
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+@media screen and (min-width:401px) and (max-width:900px) {
+    .pageContentWrapper{
+        height: 91vh;
+    }
+    .navigationTipWrapper{
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: scroll;
+        height: fit-content;
+        padding: 2rem 0.5rem;
+    }
+    .card{
+        min-width: 10rem;
+        max-width: 10rem;
+        min-height: 15rem;
+        max-height: 15rem;
+    }
+    .cardImage img{
+        width: 2rem;
+    }
+    .cardHeader{
+        font-size: 14px;
+    }
+    .cardDescription{
+        font-size: 12.5px;
+    }
+    .card:hover{
+        transform: scale(1.05);
+    }
+    .aboutSectionCompanyNameHolder{
+        font-size: 2.25rem;
+    }
+    .companyInfo{
+        font-size: 13px;
+    }
+    .whyChoseUsHeader{
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    .bulletPointWrapper{
+        font-size: 13px;
+    }
+    .tabbedContentHolder{
+        width : max(22rem,65vw);
+    }
+    .tabbedContentHeadingHolder{
+        font-size: 13px;
+        padding: 0.25rem 0rem;
+        height: 2rem;
+    }
+    .tabbedContentDataHolder{
+        font-size: 11.5px;
+    }
+    .contactSectionWrapper{
+        width: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .contactSectionTextWrapper{
+        font-size: 0.75rem;
+    }
+    .formWrapper{
+        width: max(22rem,45vw);
+        margin: 0 auto;
+    }
+    .formWrapper form{
+        font-size: 13px;
+    }
+    .formWrapper form input, .formWrapper form textarea{
+        width: 95%;
+    }
+}
+@media screen and (min-width:200px)  and (max-width:400px){
+    .pageContentWrapper{
+        height: 91vh;
+    }
+    .navigationTipWrapper{
+        flex-wrap: nowrap;
+        width: 100%;
+        overflow-x: scroll;
+        height: fit-content;
+        padding: 2rem 0.5rem;
+    }
+    .card{
+        min-width: 10rem;
+        max-width: 10rem;
+        min-height: 14rem;
+        max-height: 14rem;
+    }
+    .cardImage img{
+        width: 1.5rem;
+    }
+    .cardHeader{
+        font-size: 12px;
+    }
+    .cardDescription{
+        font-size: 10.5px;
+    }
+    .card:hover{
+        transform: scale(1);
+    }
+    .aboutSectionCompanyNameHolder{
+        font-size: 2rem;
+    }
+    .companyInfo{
+        font-size: 12px;
+    }
+    .whyChoseUsHeader{
+        font-size: 1.15rem;
+        font-weight: 600;
+    }
+    .bulletPointWrapper{
+        font-size: 12.25px;
+    }
+    .tabbedContentHolder{
+        width: 100%;
+    }
+    .tabbedContentHeadingHolder{
+        font-size: 12px;
+        padding: 0.25rem 0rem;
+        height: 2rem;
+    }
+    .tabbedContentDataHolder{
+        font-size: 11.5px;
+    }
+    .contactSectionWrapper{
+        width: 100%;
+        display: grid;
+        place-content: center;
+    }
+    .contactSectionTextWrapper{
+        font-size: 0.75rem;
+    }
+    .formWrapper{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .formWrapper form{
+        font-size: 12px;
+    }
+    .formWrapper form input, .formWrapper form textarea{
+        width: 100%;
+    }
+}
