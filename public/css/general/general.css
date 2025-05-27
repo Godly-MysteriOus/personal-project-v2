@@ -11,7 +11,7 @@ html{
     width: 100%;
     min-height: 100vh;
     max-height: 100vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
     position: relative;
 }
 html::-webkit-scrollbar{
