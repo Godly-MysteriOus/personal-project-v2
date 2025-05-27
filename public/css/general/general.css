@@ -4,19 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    width: 100%;
-    min-height: 99lvh;
-    max-height: 100lvh;
-    overflow-y: scroll;
-    position: relative;
-}
-html::-webkit-scrollbar{
-    display: none;
-}
+
 .normalButtonCss{
     border: none;
     border-radius: 0.75rem;

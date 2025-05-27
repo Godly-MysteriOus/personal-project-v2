@@ -1,6 +1,6 @@
 footer{
     min-height: fit-content;
-    max-height: 40dvh;
+    /* max-height: 40dvh; */
     background: black;
     color: white;
     padding: 2.5rem 2rem;
