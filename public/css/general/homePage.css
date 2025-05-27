@@ -1,5 +1,15 @@
+.body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.body::-webkit-scrollbar{
+    display: none;
+}
 .pageContentWrapper{
-    max-height: calc(100vh - 4rem);
+    max-height: 100vh ;
     overflow-y: scroll;
 }
 .pageContentWrapper::-webkit-scrollbar {
