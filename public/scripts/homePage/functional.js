@@ -81,3 +81,16 @@ function dynamicPageData(){
     });
 
 }
+
+document.querySelector('.navigationItems').addEventListener('click',async(e)=>{
+    const scrollTo = e.target.className.split(' ')[0];
+    const sections = ['homeSection','AboutUsSection','contactUsSection'];
+    if(sections.findIndex(val=> val==scrollTo)!=-1){
+        document.getElementById(scrollTo).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    if(!navigationBarWrapper.classList.contains('showSidebar')){
+        navigationBarWrapper.classList.add('showSidebar');
+        menuBtn.classList.remove('alternateButtonOnly');
+        closeBtn.classList.add('alternateButtonOnly');
+    }
+});
