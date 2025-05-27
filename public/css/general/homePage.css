@@ -1,5 +1,5 @@
 .pageContentWrapper{
-    max-height: calc(100vh - 4rem);
+    height: 89vh;
     overflow-y: scroll;
 }
 .pageContentWrapper::-webkit-scrollbar {
@@ -133,7 +133,7 @@
     border-bottom: 2px solid #970747;
 }
 
-#contactUsSection{
+#contantUsSection{
     min-height: 90vh;
     width: 100%;
     display: grid;
