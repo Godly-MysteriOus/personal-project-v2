@@ -37,7 +37,7 @@
     gap: 1rem;
     align-items: center;
     justify-content: end;
-    width: 50%;
+    width: 60%;
 } 
 .navItemCss{
     color: white;
@@ -78,6 +78,11 @@
 @media screen and (min-width:601px) and (max-width:900px) {
     .navItemCss{
         font-size: 13px;
+        transition: none;
+        color: #444;
+    }
+    .active{
+        transform: none;
     }
     .normalButtonCss{
         padding: 0.35rem 0.75rem;
@@ -93,7 +98,7 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100dvh;
+        height: 100vh;
         width: max(10rem,25%);
     }
     .navigationItems{
@@ -101,9 +106,6 @@
         display: grid;
         height: 50dvh;
         width: 100%;
-    }
-    .navItemCss,.lexend{
-        color: #444;
     }
     .menuButtonMobileOnly{
         display: flex;
@@ -132,11 +134,16 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100dvh;
+        height: 100vh;
         width: max(10rem,25%);
     }
-    .navItemCss,.lexend{
+    .navItemCss{
+        font-size: 13px;
+        transition: none;
         color: #444;
+    }
+    .active{
+        transform: none;
     }
     .closeBtn{
        filter: invert(1);
@@ -177,11 +184,16 @@
         top: 0;
         right: 0;
         background-color: #f2f2f2;
-        height: 100dvh;
+        height: 100vh;
         width: max(10rem,20%);
     }
-    .navItemCss,.lexend{
+    .navItemCss{
+        font-size: 13px;
+        transition: none;
         color: #444;
+    }
+    .active{
+        transform: none;
     }
     .closeBtn{
        filter: invert(1);
